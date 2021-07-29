@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Download recipe for the Advitronics version of ConversationManager. Finds and downloads a ConversationManager release disk image.</string>
+    <key>Identifier</key>
+    <string>nl.paromacs.autopkg.download.advitronics-conversation-manager</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>ConversationManager</string>
+        <key>DOWNLOAD_URL</key>
+        <string>https://advitronics.nl/download/ConversationManager.dmg</string>
+        <key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
+        <false />
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.2.0</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>%DOWNLOAD_URL%</string>
+                <key>filename</key>
+                <string>%NAME%.dmg</string>
+            </dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>CodeSignatureVerifier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_path</key>
+                <string>%pathname%/%NAME%.app</string>
+                <key>requirement</key>
+                <string>anchor apple generic and identifier "com.electron.conversationmanager" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = H34DGJE24B</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
