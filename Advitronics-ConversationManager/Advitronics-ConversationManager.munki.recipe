@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads Advitronics ConversationManager disk image and imports into Munki.</string>
     <key>Identifier</key>
-    <string>nl.paromacs.autopkg.munki.advitronics-conversation-manager</string>
+    <string>com.github.paromacs.munki.Advitronics-ConversationManager</string>
     <key>Input</key>
     <dict>
         <key>MUNKI_REPO_SUBDIR</key>
@@ -36,7 +36,7 @@
     <key>MinimumVersion</key>
     <string>0.2.0</string>
     <key>ParentRecipe</key>
-    <string>nl.paromacs.autopkg.download.advitronics-conversation-manager</string>
+    <string>com.github.paromacs.download.Advitronics-ConversationManager</string>
     <key>Process</key>
     <array>
         <dict>

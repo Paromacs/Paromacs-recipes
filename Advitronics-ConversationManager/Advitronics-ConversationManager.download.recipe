@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Download recipe for the Advitronics version of ConversationManager. Finds and downloads a ConversationManager release disk image.</string>
     <key>Identifier</key>
-    <string>nl.paromacs.autopkg.download.advitronics-conversation-manager</string>
+    <string>com.github.paromacs.download.Advitronics-ConversationManager</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
