@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>ConversationManager</string>
         <key>DOWNLOAD_URL</key>
-        <string>https://advitronics.nl/download/ConversationManager.dmg</string>
+        <string>https://www.advitronics.nl/wp-content/uploads/ConversationManager.dmg</string>
         <key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
         <false />
     </dict>
