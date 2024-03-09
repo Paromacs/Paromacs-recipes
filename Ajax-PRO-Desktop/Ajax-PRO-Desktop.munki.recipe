@@ -19,8 +19,29 @@
                 <string>testing</string>
             </array>
             <key>description</key>
-            <string>Integrated app for the installation and monitoring business.
-            Use the PRO Desktop app to unleash the full potential of Ajax security systems.</string>
+            <string>Integrated app for the installation and monitoring business.<br/>
+Use the PRO Desktop app to unleash the full potential of Ajax security systems.<br/>
+<br/>
+<b>Full-scale monitoring</b><br/>
+Connect more than 3000 client-owned facilities and monitor everything, even the temperature inside the protected premises.<br/>
+<br/>
+<b>Detailed summary</b><br/>
+Receive exhaustive incident-related data — address, cause of alarm, triggered detector or panic button — and coordinate the rapid response team.<br/>
+<br/>
+<b>Remote set up</b><br/>
+Make changes to the settings of client hubs, test detectors, and arm or disarm facilities without leaving your office.<br/>
+<br/>
+<b>History of events</b><br/>
+Review events that occur at the facility and filter them by type of alarm, malfunction, arming and disarming as well as action of smart sockets and relays.<br/>
+<br/>
+<b>Customer cards</b><br/>
+Create databases of facilities with addresses and contacts of all owners.<br/>
+<br/>
+<b>Flexible access</b><br/>
+Open temporary access to hub settings for installers and users that will be recalled automatically after predetermined time period.<br/>
+<br/>
+<b>Quick search</b><br/>
+Look for protected facilities by name or hub ID.</string>
             <key>display_name</key>
             <string>Ajax PRO Desktop</string>
             <key>name</key>
