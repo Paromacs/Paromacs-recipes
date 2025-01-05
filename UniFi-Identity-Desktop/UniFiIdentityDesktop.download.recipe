@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>identifier</key>
+    <string>com.github.paromacs.download.unifi-identity-desktop</string>
+    <key>description</key>
+    <string>Download recipe for UniFi Identity Desktop for macOS. Finds and downloads a UniFi Identity Desktop for macOS release disk image.</string>
+    <key>parent</key>
+    <string>com.github.autopkg.download</string>
+    <key>input</key>
+    <dict>
+        <key>NAME</key>
+        <string>UniFiIdentityDesktop</string>
+        <key>DOWNLOAD_PAGE_URL</key>
+        <string>https://download.uid.ui.com/?app=UI-DESKTOP-MACOS</string>
+    </dict>
+    <key>process</key>
+    <array>
+        <dict>
+            <key>processor</key>
+            <string>URLTextSearcher</string>
+            <key>arguments</key>
+            <dict>
+                <key>url</key>
+                <string>%DOWNLOAD_PAGE_URL%</string>
+                <key>re_pattern</key>
+                <string>https://fw-download\\.ubnt\\.com/data/uid-ui-desktop-app/[a-z0-9-]+\\.pkg</string>
+                <key>result_output_var_name</key>
+                <string>download_url</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>processor</key>
+            <string>URLDownloader</string>
+            <key>arguments</key>
+            <dict>
+                <key>url</key>
+                <string>%download_url%</string>
+                <key>filename</key>
+                <string>UniFiIdentityDesktop.pkg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>processor</key>
+            <string>PkgCreator</string>
+            <key>arguments</key>
+            <dict>
+                <key>pkgroot</key>
+                <string>%RECIPE_CACHE_DIR%/UniFiIdentityDesktop</string>
+                <key>pkgname</key>
+                <string>UniFiIdentityDesktop</string>
+                <key>version</key>
+                <string>0.0.0</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
