@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Download the latest PearPie beta for Apple Silicon and verify its code signature.</string>
+	<key>Identifier</key>
+	<string>local.download.PearPie-arm64</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>PearPie</string>
+		<key>DOWNLOAD_URL</key>
+		<string>https://releases.pearpie.ai/beta/PearPie-latest-mac-arm64.dmg</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>2.7</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>%DOWNLOAD_URL%</string>
+				<key>filename</key>
+				<string>%NAME%-arm64.dmg</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+			<key>Arguments</key>
+			<dict>
+				<key>input_path</key>
+				<string>%pathname%/PearPie.app</string>
+				<key>requirement</key>
+				<string>identifier "com.pearpie.desktop" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] exists and certificate leaf[field.1.2.840.113635.100.6.1.13] exists and certificate leaf[subject.OU] = "WC2DFZ863B"</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>AppDmgVersioner</string>
+			<key>Arguments</key>
+			<dict>
+				<key>dmg_path</key>
+				<string>%pathname%</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
