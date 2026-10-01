@@ -5,9 +5,9 @@
 	<key>Description</key>
 	<string>Import the latest PearPie beta for Apple Silicon into Munki.</string>
 	<key>Identifier</key>
-	<string>local.munki.PearPie-arm64</string>
+	<string>com.github.paromacs.munki.PearPie</string>
 	<key>ParentRecipe</key>
-	<string>local.download.PearPie-arm64</string>
+	<string>com.github.paromacs.download.PearPie</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -32,10 +32,6 @@
 			</array>
 			<key>minimum_os_version</key>
 			<string>13.0</string>
-            <key>developer</key>
-            <string>PearPie B.V.</string>
-            <key>unattended_install</key>
-            <true/>
 			<key>uninstallable</key>
 			<true/>
 			<key>uninstall_method</key>

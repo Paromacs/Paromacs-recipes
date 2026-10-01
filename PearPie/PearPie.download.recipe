@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Download the latest PearPie beta for Apple Silicon and verify its code signature.</string>
 	<key>Identifier</key>
-	<string>local.download.PearPie-arm64</string>
+	<string>com.github.paromacs.download.PearPie</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
