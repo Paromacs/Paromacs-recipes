@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Publish DYMO Connect Windows x64 and x86 installers to the existing Action1 Software Repository package.</string>
+    <key>Identifier</key>
+    <string>com.github.paromacs.action1.DYMOConnect</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>DYMOConnect</string>
+        <key>ACTION1_PACKAGE_NAME</key>
+        <string>DYMO Connect</string>
+        <key>ACTION1_DRY_RUN</key>
+        <string>true</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>2.7</string>
+    <key>ParentRecipe</key>
+    <string>com.github.paromacs.download.DYMOConnect</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>Action1DYMOUpload</string>
+        </dict>
+    </array>
+</dict>
+</plist>
