@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Discover and verify the latest PearPie Windows x64 MSI.</string>
+	<key>Identifier</key>
+	<string>com.github.paromacs.download.PearPie-Win</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>PearPie-Win</string>
+		<key>PEARPIE_RELEASE_URL</key>
+		<string>https://releases.pearpie.ai/beta/latest-win-x64-msi.json</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>2.7</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>PearPieWinReleaseProvider</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>PearPieWinDownloader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
