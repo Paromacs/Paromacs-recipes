@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Discover and download official DYMO Connect for Desktop Windows x64 and x86 installers using WinGet metadata.</string>
+	<key>Identifier</key>
+	<string>com.github.paromacs.download.DYMOConnect-Win</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>DYMOConnect-Win</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>2.7</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>DYMOConnectWinGetProvider</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>DYMOConnectDualDownloader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
