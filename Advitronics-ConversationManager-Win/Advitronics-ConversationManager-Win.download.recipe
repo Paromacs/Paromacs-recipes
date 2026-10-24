@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Discover and download the current official Advitronics Conversation Manager Windows MSI.</string>
+    <key>Identifier</key>
+    <string>com.github.paromacs.download.Advitronics-ConversationManager-Win</string>
+    <key>Input</key>
+    <dict>
+        <key>ADVITRONICS_DOWNLOADS_URL</key>
+        <string>https://advitronics.nl/downloads/</string>
+        <key>NAME</key>
+        <string>Advitronics-ConversationManager-Win</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>2.7</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>AdvitronicsConversationManagerWinProvider</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>AdvitronicsConversationManagerWinDownloader</string>
+        </dict>
+    </array>
+</dict>
+</plist>
