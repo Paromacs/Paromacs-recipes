@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Discover the latest official CalDavSynchronizer Windows ZIP, extract and validate its MSI only (not the EXE).</string>
+	<key>Identifier</key>
+	<string>com.github.paromacs.download.CalDavSynchronizer-Win</string>
+	<key>Input</key>
+	<dict>
+		<key>CALDAVSYNCHRONIZER_DOWNLOADS_URL</key>
+		<string>https://caldavsynchronizer.org/download-2/</string>
+		<key>NAME</key>
+		<string>CalDavSynchronizer-Win</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>2.7</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>CalDavSynchronizerWinProvider</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>CalDavSynchronizerWinDownloader</string>
+		</dict>
+	</array>
+</dict>
+</plist>

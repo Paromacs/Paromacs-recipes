@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Add the newest CalDavSynchronizer Windows MSI as a version in the existing Action1 package.</string>
+	<key>Identifier</key>
+	<string>com.github.paromacs.action1.CalDavSynchronizer-Win</string>
+	<key>Input</key>
+	<dict>
+		<key>ACTION1_BASE_URL</key>
+		<string>https://app.eu.action1.com/api/3.0</string>
+		<key>ACTION1_CLIENT_ID</key>
+		<string>CHANGE_ME</string>
+		<key>ACTION1_CLIENT_SECRET</key>
+		<string>CHANGE_ME</string>
+		<key>ACTION1_DRY_RUN</key>
+		<string>true</string>
+		<key>ACTION1_ORG_ID</key>
+		<string>CHANGE_ME</string>
+		<key>ACTION1_PACKAGE_NAME</key>
+		<string>CalDavSynchronizer</string>
+		<key>NAME</key>
+		<string>CalDavSynchronizer-Win</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>2.7</string>
+	<key>ParentRecipe</key>
+	<string>com.github.paromacs.download.CalDavSynchronizer-Win</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>Action1CalDavSynchronizerWinUpload</string>
+		</dict>
+	</array>
+</dict>
+</plist>
