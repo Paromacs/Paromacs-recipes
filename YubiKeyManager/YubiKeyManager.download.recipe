@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the latest YubiKey Manager macOS installer.</string>
+
+    <key>Identifier</key>
+    <string>com.github.paromacs.YubiKeyManager.download</string>
+
+    <key>Input</key>
+    <dict/>
+
+    <key>MinimumVersion</key>
+    <string>2.3</string>
+
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>YubiKeyManagerVersionProvider</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>%url%</string>
+                <key>filename</key>
+                <string>yubikey-manager-%version%-mac.pkg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+    </array>
+</dict>
+</plist>
