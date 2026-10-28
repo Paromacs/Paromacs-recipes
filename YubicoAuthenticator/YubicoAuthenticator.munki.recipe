@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+ "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads Yubico Authenticator and imports it into Munki.</string>
+
+    <key>Identifier</key>
+    <string>com.github.paromacs.YubicoAuthenticator.munki</string>
+
+    <key>ParentRecipe</key>
+    <string>com.github.paromacs.YubicoAuthenticator.download</string>
+
+    <key>Input</key>
+    <dict>
+		<key>NAME</key>
+		<string>Yubico Authenticator</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps/Yubico</string>
+        <key>MUNKI_CATALOG</key>
+        <string>testing</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>display_name</key>
+			<string>Yubico Authenticator</string>
+			<key>description</key>
+			<string>Desktop authenticator for YubiKey-backed OATH credentials.</string>
+			<key>catalogs</key>
+			<array>
+				<string>%MUNKI_CATALOG%</string>
+			</array>
+            <key>developer</key>
+            <string>Yubico</string>
+            <key>category</key>
+            <string>Security</string>
+			<key>minimum_os_version</key>
+			<string>13.0</string>
+			<key>uninstallable</key>
+			<true/>
+            <key>installer_type</key>
+            <string>copy_from_dmg</string>
+            <key>items_to_copy</key>
+            <array>
+                <dict>
+                    <key>source_item</key>
+                    <string>Yubico Authenticator.app</string>
+
+                    <key>destination_path</key>
+                    <string>/Applications/Yubico Authenticator.app</string>
+                </dict>
+            </array>
+		</dict>
+    </dict>
+
+    <key>MinimumVersion</key>
+    <string>2.7</string>
+
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+            <key>Arguments</key>
+            <dict>
+				<key>pkg_path</key>
+				<string>%pathname%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
