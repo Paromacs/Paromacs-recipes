@@ -45,13 +45,13 @@
             <true/>
 
             <key>unattended_uninstall</key>
-            <false/>
+            <true/>
 
             <key>autoremove</key>
             <false/>
 
             <key>uninstallable</key>
-            <false/>
+            <true/>
 
             <key>catalogs</key>
             <array>
@@ -80,6 +80,16 @@
                 <string>%version%</string>
                 <key>munki_arch</key>
                 <string>%ARCH%</string>
+            </dict>
+        </dict>
+
+        <dict>
+            <key>Processor</key>
+            <string>YealinkMunkiVersion</string>
+            <key>Arguments</key>
+            <dict>
+                <key>version</key>
+                <string>%version%</string>
             </dict>
         </dict>
 
