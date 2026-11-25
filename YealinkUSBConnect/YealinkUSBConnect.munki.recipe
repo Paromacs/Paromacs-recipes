@@ -84,11 +84,6 @@
         <dict>
             <key>Processor</key>
             <string>YealinkMunkiVersion</string>
-            <key>Arguments</key>
-            <dict>
-                <key>version</key>
-                <string>%version%</string>
-            </dict>
         </dict>
 
         <dict>
