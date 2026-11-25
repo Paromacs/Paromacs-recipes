@@ -76,8 +76,6 @@
                 <string>%MUNKI_REPO%</string>
                 <key>repo_subdirectory</key>
                 <string>%MUNKI_REPO_SUBDIR%</string>
-                <key>version</key>
-                <string>%version%</string>
                 <key>munki_arch</key>
                 <string>%ARCH%</string>
             </dict>
